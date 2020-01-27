@@ -114,6 +114,14 @@ export default function App(props) {
             <img src={weather.icon} alt={weather.description} />
           </div>
         </div>
+        <div>
+          <small>
+            <a href="https://github.com/frannieziesemer/weather-react">
+              Open Source code
+            </a>{" "}
+            by Frannie Ziesemer
+          </small>
+        </div>
       </div>
     );
   } else {
