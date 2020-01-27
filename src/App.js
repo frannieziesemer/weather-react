@@ -52,6 +52,14 @@ export default function App(props) {
           <button type="submit">Current Location</button>
         </div>
       </form>
+      <div>
+        <small>
+          <a href="https://github.com/frannieziesemer/weather-react">
+            Open Source code
+          </a>{" "}
+          by Frannie Ziesemer
+        </small>
+      </div>
     </div>
   );
 
