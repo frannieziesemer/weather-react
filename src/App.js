@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./index.css";
 import axios from "axios";
-//import ReactAnimatedWeather from "react-animated-weather";
+import "./WeatherData";
+import WeatherData from "./WeatherData";
 
 export default function App(props) {
   let [city, setCity] = useState(null);
@@ -87,49 +88,13 @@ export default function App(props) {
             </div>
           </form>
         </div>
-        <div>
-          <h1 className="location"> {city} </h1>
-        </div>
-        <div className="row currentInfo">
-          <div className="currentData">
-            <ul>
-              <li> {weather.description} </li>
-              <li>
-                <i className="fas fa-thermometer-three-quarters" />
-                <span> High: {weather.maximumTemp} </span>
-              </li>
-              <li>
-                <i className="fas fa-thermometer-quarter" />
-                <span> Low: {weather.minimumTemp} </span>
-              </li>
-              <li>
-                <i className="fas fa-wind" />
-                <span> {weather.wind} km/h </span>
-              </li>
-            </ul>
-          </div>
-          <div className="temperature">
-            <h3> {weather.temperature} </h3>
-            <div className="degreesSelection float-left">
-              <a href="/" className="active">
-                {" "}
-                °C{" "}
-              </a>
-              |<a href="/">°F</a>
-            </div>
-          </div>
-          <div className="currentIcon">
-            <img src={weather.icon} alt={weather.description} />
-          </div>
-        </div>
-        <div>
-          <small>
-            <a href="https://github.com/frannieziesemer/weather-react">
-              Open Source code
-            </a>{" "}
-            by Frannie Ziesemer
-          </small>
-        </div>
+        <WeatherData weather={weather} city={city} />
+        <small>
+          <a href="https://github.com/frannieziesemer/weather-react">
+            Open Source code
+          </a>{" "}
+          by Frannie Ziesemer
+        </small>
       </div>
     );
   } else {
