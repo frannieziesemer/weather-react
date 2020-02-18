@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import FormatDate from "./FormatDate";
+import Icon from "./Icon";
 
 export default function WeatherData(props) {
   return (
@@ -10,7 +11,7 @@ export default function WeatherData(props) {
         <FormatDate date={props.weather.timestamp} />
       </div>
       <div className="row currentInfo">
-        <div className="currentData">
+        <div className="col-md-4  currentData">
           <ul>
             <li> {props.weather.description} </li>
             <li>
@@ -27,7 +28,7 @@ export default function WeatherData(props) {
             </li>
           </ul>
         </div>
-        <div className="temperature">
+        <div className="col-md-4 temperature">
           <h3> {props.weather.temperature} </h3>
           <div className="degreesSelection float-left">
             <a href="/" className="active">
@@ -37,8 +38,8 @@ export default function WeatherData(props) {
             |<a href="/">°F</a>
           </div>
         </div>
-        <div className="currentIcon">
-          <img src={props.weather.icon} alt={props.weather.description} />
+        <div className="col-md-4 currentIcon">
+          <Icon code={props.weather.icon} />
         </div>
       </div>
     </div>

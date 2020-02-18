@@ -31,7 +31,7 @@ export default function Weather(props) {
       maximumTemp: Math.round(response.data.main.temp_max),
       minimumTemp: Math.round(response.data.main.temp_min),
       wind: Math.round(response.data.wind.speed),
-      //icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       city: response.data.name
     });
     setLoaded(true);
