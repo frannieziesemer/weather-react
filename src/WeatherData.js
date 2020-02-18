@@ -6,6 +6,7 @@ export default function WeatherData(props) {
     <div className="WeatherData">
       <div>
         <h1 className="location"> {props.city} </h1>
+        <p>{props.weather.date}</p>
       </div>
       <div className="row currentInfo">
         <div className="currentData">
