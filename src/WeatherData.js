@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./index.css";
+import FormatDate from "./FormatDate";
 
 export default function WeatherData(props) {
   return (
     <div className="WeatherData">
       <div>
         <h1 className="location"> {props.city} </h1>
-        <p>{props.weather.date}</p>
+        <FormatDate date={props.weather.timestamp} />
       </div>
       <div className="row currentInfo">
         <div className="currentData">

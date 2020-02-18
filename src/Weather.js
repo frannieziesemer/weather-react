@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./index.css";
 import axios from "axios";
-import "./WeatherData";
 import WeatherData from "./WeatherData";
 
 export default function Weather(props) {
@@ -27,7 +26,7 @@ export default function Weather(props) {
     setLoaded(true);
     setWeather({
       description: response.data.weather[0].main,
-      date: "Tuesday 10:00",
+      timestamp: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       maximumTemp: Math.round(response.data.main.temp_max),
       minimumTemp: Math.round(response.data.main.temp_min),
