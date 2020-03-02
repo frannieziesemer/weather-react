@@ -4,9 +4,9 @@ import axios from "axios";
 import WeatherData from "./WeatherData";
 
 export default function Weather(props) {
-  let [city, setCity] = useState(props.defaultCity);
-  let [weather, setWeather] = useState({});
-  let [loaded, setLoaded] = useState(false);
+  const [city, setCity] = useState(props.defaultCity);
+  const [weather, setWeather] = useState({});
+  const [loaded, setLoaded] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -42,6 +42,9 @@ export default function Weather(props) {
   if (loaded) {
     return (
       <div className="search weather">
+        <div className="locationButton">
+          <button type="submit">Current Location</button>
+        </div>
         <form onSubmit={handleSubmit}>
           <div className="citySearch">
             <input
@@ -56,9 +59,6 @@ export default function Weather(props) {
             <button type="submit">
               <i className="fas fa-search" />
             </button>
-          </div>
-          <div className="locationButton">
-            <button type="submit">Current Location</button>
           </div>
         </form>
         <div>
