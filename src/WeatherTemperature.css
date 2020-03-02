@@ -1,0 +1,11 @@
+h3 {
+  font-size: 80px;
+  font-weight: 350;
+}
+.temperature {
+  display: flex;
+  font-size: 20px;
+}
+.degreesSelection {
+  padding: 15px 5px;
+}

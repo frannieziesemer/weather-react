@@ -1,0 +1,23 @@
+.location {
+  font-weight: 400;
+  text-transform: capitalize;
+  padding-top: 10px;
+}
+.currentInfo {
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-top: 10px;
+  padding-inline-start: 10px;
+}
+
+.currentIcon {
+  padding: 15px 0px 0px 20px;
+}
+
+.weatherDescription {
+  font-size: 22px;
+  font-weight: 450;
+}
