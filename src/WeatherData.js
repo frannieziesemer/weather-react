@@ -26,11 +26,11 @@ export default function WeatherData(props) {
 
             <li>
               <i className="fas fa-thermometer-three-quarters" />
-              <span> High: {props.weather.maximumTemp} </span>
+              <span> High: {props.weather.maximumTemp} °C</span>
             </li>
             <li>
               <i className="fas fa-thermometer-quarter" />
-              <span> Low: {props.weather.minimumTemp} </span>
+              <span> Low: {props.weather.minimumTemp} °C </span>
             </li>
             {/* <li>
               <i className="fas fa-wind" />
