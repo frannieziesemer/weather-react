@@ -20,7 +20,7 @@ export default function WeatherTemperature(props) {
 
   if (unit === "celcius") {
     return (
-      <div className=" col-md-4 temperature">
+      <div className="temperature">
         <h3> {props.celcius} </h3>
         <div className="degreesSelection ">
           °C |
@@ -32,7 +32,7 @@ export default function WeatherTemperature(props) {
     );
   } else {
     return (
-      <div className="col-md-4 temperature">
+      <div className="temperature">
         <h3> {Math.round(convertFahrenheit())} </h3>
         <div className="degreesSelection ">
           <a href="/" onClick={displayCelcius}>

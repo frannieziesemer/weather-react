@@ -1,10 +1,8 @@
 .app {
-  padding: 15px 0px 0px 15px;
-  margin: 50px auto;
+  padding: 30px;
   background: rgb(231, 243, 241, 0.6);
   color: #253605;
   border: 1px solid rgb(37, 54, 5, 0.7);
-
   border-radius: 10px;
 }
 
@@ -16,13 +14,11 @@ footer {
 .search {
   display: flex;
   flex-direction: row;
-  padding: 10px 10px 10px 0px;
 }
 
 .searchElement,
-.submitButton,
-.locationButton {
-  padding: 5px 0px 5px 0px;
+.submitButton {
+  padding: 5px 0px;
 }
 
 .updateTime {

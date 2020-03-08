@@ -42,7 +42,7 @@ export default function Weather(props) {
 
   if (loaded) {
     return (
-      <div className=" weather container-fluid">
+      <div className=" weather">
         <form className="search" onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="searchElement col-auto">
@@ -56,11 +56,6 @@ export default function Weather(props) {
             <div className="submitButton col-auto">
               <button type="submit" className="btn btn-info mb-2">
                 Submit
-              </button>
-            </div>
-            <div className="col-auto locationButton">
-              <button type="submit" className="btn btn-outline-info mb-2">
-                Current Location
               </button>
             </div>
           </div>
