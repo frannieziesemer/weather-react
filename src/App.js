@@ -10,7 +10,7 @@ export default function App() {
       </div>
 
       <footer>
-        Project coded by Frannie Ziesemer and{" "}
+        Project by Frannie Ziesemer and{" "}
         <a href="https://github.com/frannieziesemer/weather-react">
           open sourced on GitHub
         </a>

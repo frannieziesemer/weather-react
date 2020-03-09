@@ -27,16 +27,18 @@ export default function(props) {
 
   if (loaded && forecast.city.name === props.city) {
     return (
-      <div className="WeatherForecast row">
-        {forecast.list.slice(0, 5).map(function(forecastData) {
-          return (
-            <div className="col-md">
-              {formatTime(new Date(forecastData.dt * 1000))}
-              <Icon code={forecastData.weather[0].icon} />
-              {Math.round(forecastData.main.temp)} °C
-            </div>
-          );
-        })}
+      <div className="WeatherForecast ">
+        <div className="col">
+          {forecast.list.slice(0, 4).map(function(forecastData) {
+            return (
+              <div className="">
+                {formatTime(new Date(forecastData.dt * 1000))}
+                <Icon code={forecastData.weather[0].icon} />
+                {Math.round(forecastData.main.temp)} °C
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   } else {

@@ -25,14 +25,22 @@ export default function WeatherData(props) {
               {" "}
               {props.weather.description}{" "}
             </li>
-
+            <li>
+              <i className="fas fa-thermometer-quarter" />
+              <span> Low: {props.weather.minimumTemp} °C </span>
+            </li>
             <li>
               <i className="fas fa-thermometer-three-quarters" />
               <span> High: {props.weather.maximumTemp} °C</span>
             </li>
+
             <li>
-              <i className="fas fa-thermometer-quarter" />
-              <span> Low: {props.weather.minimumTemp} °C </span>
+              <i className="fas fa-tint" />
+              <span> Humidity: {props.weather.humidity} %</span>
+            </li>
+            <li>
+              <i className="fas fa-wind" />
+              <span>Wind: {props.weather.wind} km/h </span>
             </li>
             {/* <li>
               <i className="fas fa-wind" />
