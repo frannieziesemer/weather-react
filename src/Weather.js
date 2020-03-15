@@ -26,7 +26,7 @@ export default function Weather(props) {
 
   function searchWeather(response) {
     setWeather({
-      description: response.data.weather[0].main,
+      description: response.data.weather[0].description,
       timestamp: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       maximumTemp: Math.round(response.data.main.temp_max),
@@ -38,7 +38,7 @@ export default function Weather(props) {
     });
     setLoaded(true);
 
-    //console.log(response.data);
+    console.log(response.data);
   }
 
   let form = (

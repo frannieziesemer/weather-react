@@ -18,6 +18,7 @@ ul {
 }
 
 .weatherDescription {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 450;
+  text-transform: capitalize;
 }
