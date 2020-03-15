@@ -5,6 +5,7 @@ h3 {
 .temperature {
   display: flex;
   font-size: 20px;
+  padding-left: 25px;
 }
 .degreesSelection {
   padding: 15px 5px;

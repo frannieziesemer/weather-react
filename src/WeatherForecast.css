@@ -1,6 +1,8 @@
-.WeatherForecast,
-col {
-  display: block;
+.forecastBlock {
   text-align: center;
-  margin: 5px auto;
+  padding: 50px 0px 20px;
+}
+
+.icon {
+  padding-top: 5px;
 }

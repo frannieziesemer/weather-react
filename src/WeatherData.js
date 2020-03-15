@@ -13,13 +13,13 @@ export default function WeatherData(props) {
       </div>
 
       <div className="row currentInfo">
-        <div className="col-4">
+        <div className="col-sm-4">
           <WeatherTemperature celcius={props.weather.temperature} />
         </div>
-        <div className="col-4 currentIcon">
-          <Icon code={props.weather.icon} />
+        <div className="col-sm-4 currentIcon">
+          <Icon code={props.weather.icon} iconSize={84} />
         </div>
-        <div className="col-4  currentData">
+        <div className="col-sm-4  currentData">
           <ul>
             <li className="weatherDescription">
               {" "}
