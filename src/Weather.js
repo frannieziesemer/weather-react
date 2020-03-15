@@ -20,8 +20,7 @@ export default function Weather(props) {
     search();
   }
 
-  function updatedCity(event) {
-    event.preventDefault();
+  function handleChange(event) {
     setCity(event.target.value);
   }
 
@@ -39,7 +38,7 @@ export default function Weather(props) {
     });
     setLoaded(true);
 
-    console.log(response.data);
+    //console.log(response.data);
   }
 
   let form = (
@@ -50,7 +49,7 @@ export default function Weather(props) {
             type="search"
             className="form-control "
             placeholder="Search city..."
-            onChange={updatedCity}
+            onChange={handleChange}
           />
         </div>
         <div className="submitButton col-auto">
@@ -67,7 +66,7 @@ export default function Weather(props) {
       <div className=" weather">
         {form}
         <div>
-          <WeatherData weather={weather} city={city} />
+          <WeatherData weather={weather} city={weather.city} />
         </div>
         {/* 
         DO NOT WANT TO ADD THIS AT THE MOMENT - NEED TO LEARN PROPERLY
