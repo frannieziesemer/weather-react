@@ -1,8 +1,9 @@
 
-Simple React Weather Application 
-Built for SheCodes front-end development online course 
+### React Weather Application 
+Built for SheCodes front-end development online course. 
 
-Learnings: 
-- react, hooks, props,
-- axios api fetch 
+## Skills Demonstrated: 
+- react: hooks, props
+- javascript: axios api fetch 
 - npm packages - use of icons 
+- HTML / CSS - bootstrap
