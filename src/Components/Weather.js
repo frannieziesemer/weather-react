@@ -9,7 +9,7 @@ export default function Weather(props) {
   const [weather, setWeather] = useState({});
   const [loaded, setLoaded] = useState(false);
 
-  function search() {
+  function getData() {
     let apiKey = process.env.REACT_APP_OPEN_WEATHER_API;
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
     axios.get(url).then(searchWeather);
@@ -17,24 +17,25 @@ export default function Weather(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    search();
+    getData();
   }
-
+  
   function handleChange(event) {
     setCity(event.target.value);
   }
 
   function searchWeather(response) {
+    const weatherData = response.data;
     setWeather({
-      description: response.data.weather[0].description,
-      timestamp: new Date(response.data.dt * 1000),
-      temperature: Math.round(response.data.main.temp),
-      maximumTemp: Math.round(response.data.main.temp_max),
-      minimumTemp: Math.round(response.data.main.temp_min),
-      wind: Math.round(response.data.wind.speed),
-      icon: response.data.weather[0].icon,
-      city: response.data.name,
-      humidity: response.data.main.humidity
+      description: weatherData.weather[0].description,
+      timestamp: new Date(weatherData.dt * 1000),
+      temperature: Math.round(weatherData.main.temp),
+      maximumTemp: Math.round(weatherData.main.temp_max),
+      minimumTemp: Math.round(weatherData.main.temp_min),
+      wind: Math.round(weatherData.wind.speed),
+      icon: weatherData.weather[0].icon,
+      city: weatherData.name,
+      humidity: weatherData.main.humidity
     });
     setLoaded(true);
 
@@ -75,7 +76,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    search();
+    getData();
     return "loading..";
   }
 }
