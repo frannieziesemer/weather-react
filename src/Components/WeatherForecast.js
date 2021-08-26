@@ -3,7 +3,7 @@ import "./WeatherForecast.css";
 import Icon from "./Icon";
 import axios from "axios";
 
-export default function(props) {
+export default function WeatherForecast (props) {
   const [loaded, setLoaded] = useState(false);
   const [forecast, setForecast] = useState(null);
 
